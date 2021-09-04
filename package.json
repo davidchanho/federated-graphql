@@ -1,0 +1,23 @@
+{
+  "name": "federation-demo",
+  "main": "gateway.ts",
+  "scripts": {
+    "gateway": "nodemon --exec ts-node gateway.ts",
+    "services": "concurrently \"npm:service-*\"",
+    "client": "cd client && yarn start",
+    "postinstall": "lerna bootstrap"
+  },
+  "devDependencies": {
+    "concurrently": "latest",
+    "lerna": "latest",
+    "nodemon": "latest"
+  },
+  "dependencies": {
+    "@apollo/gateway": "latest",
+    "@types/node": "^16.7.2",
+    "apollo-server": "latest",
+    "graphql": "latest",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.3.5"
+  }
+}
